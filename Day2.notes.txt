@@ -1,0 +1,49 @@
+#BITWISE OPERATORS
+10&4  #-->0
+4&4  #-->4
+12&7  #-->4
+10|4  #-->14
+~3  #-->-4
+~7  #-->-8
+~10  #-->-11
+5^5  #-->0
+5^7  #-->2
+9^8  #-->1
+----------------------------------
+#LEFT SHIFT AND RIGHT SHIFT
+5<<2  #-->20
+5>>2  #-->1
+----------------------------------
+#range()
+for i in range(1,11):
+    print(i,end=" ")
+----------------------------------
+#with jump or step value
+for j in range(2,11,2):
+    print(j,end=" ")
+----------------------------------
+#printing using end and sep delimiter
+print("its","a","good","day",end="")
+print("all","is","good")                ---->"its","a","good","day""all","is","good"
+
+print("its","a","good","day",end=" ")
+print("all","is","good")               ----->"its","a","good","day" "all","is","good"
+
+print("its","a","good","day",end="#")
+print("all","is","good")               ----->"its","a","good","day"#"all","is","good"
+
+print("its","a","good","day",end=" *")
+print("all","is","good")               ----->"its","a","good","day"*"all","is","good"
+
+#printing using seperator delimiter
+print("its","a","good","day",sep="$")
+print("all","is","good")              ----->"its"$"a"$"good"$"day"            
+                                            "all","is","good"
+
+print("its","a","good","day",sep="$")
+print("all","is","good",sep="$")      ----->"its"$"a"$"good"$"day"            
+                                            "all"$"is"$"good"
+
+print("its","a","good","day",end=" ")
+print("all","is","good",sep="***",end=" ")
+print("joy")                         ----->"its","a","good","day" "all"***"is"***"good""joy"

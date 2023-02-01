@@ -1,0 +1,72 @@
+#leading zeros error
+050435+00560123
+----------------------------------------------------------------------------
+#unicode examples(writting names in telugu)
+print(chr(3118)+chr(3148)+chr(3112)+chr(3135)+chr(3093))
+print(chr(3120)+chr(3143)+chr(3127)+chr(3149)+chr(3118)+chr(3134)
+print(chr(3088)+chr(3126)+chr(3149)+chr(3125)+chr(3120)+chr(3149)+chr(3119))
+----------------------------------------------------------------------------
+#valid variable names
+num1=300
+-n=9
+----------------------------------------------------------------------------
+#invalid variable names
+1num=12
+----------------------------------------------------------------------------
+#printing the data type
+type(36)    #-->int
+type(6.45)  #-->float
+type(10+5j) #-->complex
+type(True) #-->bool
+type('a') #-->its a string with length one
+bool(1)    #True
+int(34.6)  #-->34
+---------------------------------------------------------------------------
+#stored location
+id(56)  #-->140706377165320
+---------------------------------------------------------------------------
+#returns true if the given arguments are true   #-->True
+isinstance(55,int)
+isinstance({"fruit":["banana","orange"]},dict)  #-->True
+--------------------------------------------------------------------------
+#operators precedence and associativity
+12*(5+6)-3*4   #-->120
+4+2**2+(10+20) #-->38
+--------------------------------------------------------------------------
+num=150 #only assignment operator evaluates from right to left
+--------------------------------------------------------------------------
+int(10/2) #-->5
+10//2  #-->5
+10/2  #-->5.0
+--------------------------------------------------------------------------
+2**2  #-->4
+#logical operators
+10!=10  #-->False
+10==10  #-->True
+10<5 #-->False
+10>5  #-->True
+10>1 and 3<10  #-->True
+10>1 and 3>10  #-->False
+10>1 or 3>10  #-->True
+--------------------------------------------------------------------------
+not(10==10)  #-->False
+--------------------------------------------------------------------------
+#multiple inputs in single line
+n1,n2,n3=int(input("Enter")),int(input("Enter")),int(input("Enter"))  #-->Enter11
+Enter22
+Enter33
+-------------------------------------------------------------------------
+#multiple inputs in single line seperated by comma
+n1,n2=input("Enter").split(",")
+print(n1,n2)  #-->Enter11,22
+11 22
+-------------------------------------------------------------------------
+#multiple inputs in single line seperated by space
+n1,n2=input("Enter").split()
+print(n1,n2)  #-->Enter81 69
+81 69
+-------------------------------------------------------------------------
+#multiple inputs in single line seperated by space
+n1,n2=input("Enter").split()
+print(n1,n2) #-->Enter11 22
+11 22
