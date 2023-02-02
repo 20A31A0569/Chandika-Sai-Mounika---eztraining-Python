@@ -1,0 +1,180 @@
+#DICTIONARY Comprehension
+d={n:n*n for n in range(1,6)}
+print(d)
+
+
+#calculating product price for 5 units
+old={"rice":60,"wheat":50,"dal":70}
+new={product:price*5 for (product,price) in old.items()}
+print(new)
+
+
+#with checks
+real={"Shaheer":35,"Dev":22,"Arjun":18}
+now={name:age for (name,age) in real.items() if age>20}
+print(now)
+
+-------------------------------------------------------
+zip-->combines 2 lists forming a dictionary
+l1=[10,20,30]
+l2=["hi","hello","hrw"]
+dic={num:msg for (num,msg) in zip(l1,l2)}
+print(dic)              ----->{10: 'hi', 20: 'hello', 30: 'hrw'}
+
+-------------------------------------------------------
+-------------------------------------------------------
+#STRING
+>>>str="hi i'am "mouni"
+SyntaxError: unterminated string literal (detected at line 1)
+>>>str="hi i'am "mouni""
+SyntaxError: invalid syntax
+>>>str="hi i'am"
+>>>str
+"hi i'am"
+>>>str='hi i'am'
+SyntaxError: unterminated string literal (detected at line 1)
+>>>str='hi i\'am'
+>>>str
+"hi i'am"
+-----------------------------------------------------
+#concate:concatination---->s1+s2
+s1="Sai"
+s2=" Mounika"
+s1+s2
+'Sai Mounika'
+------------------------------------------------------
+#Repetation
+s1*3
+'SaiSaiSai'
+------------------------------------------------------
+#string methods
+>>>s="hello world"
+>>>s.upper()
+'HELLO WORLD'
+>>>s.lower()
+'hello world'
+>>>s.capitalize()
+'Hello world'
+>>>s.title()
+'Hello World'
+>>>s.replace("l","L")
+'heLLo worLd'
+>>>s.strip()
+'hello world'
+>>>s="       HELLO     WORLD  "
+>>>s.strip()
+'HELLO     WORLD'
+>>>s.split()
+['HELLO', 'WORLD']
+>>>s.split("world")
+['       HELLO     WORLD  ']
+>>>s.split("WORLD")
+['       HELLO     ', '  ']
+>>>s="hello world"
+>>>s.center(5,'$')
+'hello world'
+>>>s.center(20,'$')
+'$$$$hello world$$$$$'
+>>>s.count('h')
+1
+>>>s.count('l')
+3
+>>>s.count('l',3,len(s))
+2
+>>>s.endswith('l')
+False
+>>>s.endswith('d')
+True
+>>>s.endswith('o')
+False
+>>>s.endswith('h',5,len(s))
+False
+>>>s.endswith('d',5,len(s))
+True
+>>>s.find('l',3,len(s))
+3
+>>>s.find('l',4,len(s))
+9
+>>>s.find('l',11,len(s))
+-1
+>>>s.index('l',3,len(s))
+3
+>>>s.index('l',11,len(s))
+Traceback (most recent call last):
+  File "<pyshell#17>", line 1, in <module>
+    s.index('l',11,len(s))
+ValueError: substring not found
+>>>s.islower()
+True
+>>>s.isupper()
+False
+>>>s.istitle()
+False
+>>>max('a','b')
+'b'
+>>>max(s)
+'w'
+>>>min(s)
+' '
+>>>s.startswith('hello',0,len(s))
+True
+>>>s.startswith('hello',5,len(s))
+False
+>>>s.rfind('l',0,len(s))
+9
+>>>s.rfind('l',10,len(s))
+-1
+-------------------------------------------------------
+#MUTABLE AND IMMUTABLE
+#Immutable
+>>>r=200
+>>>r
+200
+>>>id(r)
+140705415953416
+>>>r=r+r
+>>>r
+400
+>>>id(r)
+1597419839408
+
+#mutable
+>>>L
+[10, 20, 30, 40]
+>>>id(L)
+1597424830976
+>>>L=[1,2,3]
+>>>id(L)
+1597389841088
+>>>L.append(4)
+>>>L
+[1, 2, 3, 4]
+>>>id(L)
+1597389841088
+---------------------------------------------------------
+#MATH MODULE
+math.ceil()
+math.floor()
+math.sqrt()
+math.factorial()
+math.pow()
+math.fmod()
+divmod():prints both quotient and remainder at a time
+import math
+>>>print("Ceil of 12.5:",math.ceil(12.5))
+Ceil of 12.5: 13
+>>>print("Floor of 12.5:",math.floor(12.5))
+Floor of 12.5: 12
+>>>print("Square Root of 400:",math.(400))
+SyntaxError: invalid syntax
+>>>print("Square Root of 400:",math.sqrt(400))
+Square Root of 400: 20.0
+>>>print("Factorial of 10:",math.factorial(10))
+Factorial of 10: 3628800
+>>>print("Power of 2,5:",math.pow(2,5))
+Power of 2,5: 32.0
+>>>print("Remainder of 10,3:",math.fmod(10,3))
+Remainder of 10,3: 1.0
+>>>a,b=divmod(10,3)
+>>>print(a,b)
+3 1
