@@ -1,0 +1,80 @@
+#EXCEPTION HANDLING
+When there is exception the developer does not want interruption or disturbance in the program flow ,to achieve this we are using exception handling.
+3 TYPES:
+ complile time error->syntax error
+ runtime error->infinite loop
+ logical error->divided by zero
+Example:
+a=100
+b=0
+try:#u r telling this may have error
+    print(a/b)
+#except Exception:#u r saying if error there i'll handle
+except Exception as e:
+    print("Please note , number can't be divided by zero",e)#this will print error also
+#to check your prog execution goes till end or not
+print("End of the code")
+-----------------------------------------------------------------------------
+#OOPS OBJECT ORIENTED PROGRAMMING STRUCTURE
+It's an efficent language used in java and python.For multiple reasons we use oops concepts for ex:
+1.Code reusability
+2.Security
+3.Hiding data
+
+CLASS:
+Its a blueprint.EX: Birds,Laptops etc
+
+OBJECT:
+Its a thing created based on class.
+NOTE:
+One class can have multiple objects.
+
+Example:
+CLASS          OBJECTS
+birds:parrots,peacock,dove,pegion
+laptop:lenova,hp,dell
+
+Example:
+class computer():   #class definition  
+    def config(self):  #method definition
+        print("Yes")
+lenova=computer()    #object1 creation
+lenova.config()     #method call using object 1
+hp=computer()     #object2 creation
+hp.config()     #method call using object 2
+
+-----------------------------------------------------------------------------
+#CONSTRUCTORS
+__init__
+#class creation using constructor
+class Employee:
+    def __init__(self,emp_id,name):  #construction
+        self.emp_id= emp_id
+        self.name=name
+    def display(self):
+        print("ID:%d \nName:%s" %(self.emp_id,self.name))
+emp1=Employee(101,"DEV")
+emp2=Employee(102,"JAY")
+emp1.display()
+emp2.display()
+
+----------------------------------------------------------------------------
+SCOPE OF A VARIABLE INSIDE THE CLASS
+A variable defined inside a class is called instance variable and it can be accessed with the same class
+A variable defined inside a method can be accessed within the same method., so it is immposible to retrive the value of the variable outside the method.
+In the order of execution if object 1 is created  it will automatically print the statements inside the class. NOTE-->this will not happen form object 2 onwards
+#checking the scope of the variable
+
+class computer():
+    a=10
+    b=20
+    print("Class variables:",a)
+    def config(self):
+        c=30
+        print("Method variable:",c)
+        print("Instance variables:",self.b)
+lenova=computer()
+print(lenova.a)
+dell=computer()
+print(dell.config())
+print(dell.c) 
